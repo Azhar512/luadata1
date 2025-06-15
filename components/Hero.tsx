@@ -6,14 +6,19 @@ import { Lightbulb, BarChart3, Zap, Box, Smartphone, PieChart } from "lucide-rea
 
 const Hero = () => {
   useEffect(() => {
-    // Simple particles effect
     const particleContainer = document.getElementById("hero-particles")
     if (!particleContainer) return
 
     const particleCount = 50
-    const particles = []
+    const particles: Particle[] = []
 
     class Particle {
+      x: number
+      y: number
+      speed: number
+      size: number
+      opacity: number
+
       constructor() {
         this.reset()
         this.y = Math.random() * window.innerHeight
@@ -48,16 +53,13 @@ const Hero = () => {
       }
     }
 
-    // Create particles
     for (let i = 0; i < particleCount; i++) {
       particles.push(new Particle())
     }
 
     const animateParticles = () => {
       particles.forEach((particle) => particle.update())
-
       particleContainer.innerHTML = particles.map((particle) => particle.render()).join("")
-
       requestAnimationFrame(animateParticles)
     }
 
