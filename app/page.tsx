@@ -1,12 +1,13 @@
 import type { Metadata } from "next"
-import Header from "@/components/Header"
-import Hero from "@/components/Hero"
-import Services from "@/components/Services"
-import Solutions from "@/components/Solutions"
-import Stats from "@/components/Stats"
-import Contact from "@/components/Contact"
-import Footer from "@/components/Footer"
-import ProgressBar from "@/components/ProgressBar"
+import Header from "../components/Header"
+import Hero from "../components/Hero"
+import Services from "../components/Services"
+import Solutions from "../components/Solutions"
+import Stats from "../components/Stats"
+import Contact from "../components/Contact"
+import Footer from "../components/Footer"
+import ProgressBar from "../components/ProgressBar"
+
 
 export const metadata: Metadata = {
   title: "LuaData - AI, ML & Data Science Solutions",
